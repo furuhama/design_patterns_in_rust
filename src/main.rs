@@ -6,4 +6,5 @@ fn main() {
     patterns::command();
     patterns::state();
     patterns::strategy();
+    patterns::template_method();
 }
