@@ -7,4 +7,5 @@ fn main() {
     patterns::state();
     patterns::strategy();
     patterns::template_method();
+    patterns::memento();
 }
