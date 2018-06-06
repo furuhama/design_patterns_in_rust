@@ -1,3 +1,7 @@
+// Template Method pattern
+// this pattern is for maintaining mothods which are almost the same
+// but some detailed points are different.
+
 pub fn template_method() {
     let factory_a = create_factory(FactoryID::A);
     let a_x = factory_a.create_product_x();
@@ -12,6 +16,8 @@ pub fn template_method() {
     println!("{}", b_y.get_value());
 }
 
+// AbstractFactory trait makes the value which has ProductX or ProductY trait
+// and which is stored on heap memory
 trait AbstractFactory<'a> {
     fn create_product_x(&self) -> Box<ProductX + 'a>;
     fn create_product_y(&self) -> Box<ProductY + 'a>;
@@ -25,6 +31,7 @@ trait ProductY {
     fn get_value(&self) -> String;
 }
 
+// Define ConcreteProduct structs with their constructors(`new` method)
 struct ConcreteProductX(String);
 impl ConcreteProductX {
     fn new(msg: String) -> ConcreteProductX {
