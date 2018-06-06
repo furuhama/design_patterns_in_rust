@@ -1,6 +1,12 @@
+// Memento Pattern
+//
+// Originator has its state.
+// Caretaker memorize Originator's previous states.
+// Every Originator's state has Memento trait.
+
 pub fn memento() {
-    let mut caretaker = CaretakerX::new();
-    let mut originator = OriginatorX(10);
+    let mut caretaker = ConcreteCaretaker::new();
+    let mut originator = ConcreteOriginator(10);
 
     caretaker.add_memento(originator.generate_memento());
     println!("{:?}", originator);
@@ -25,10 +31,10 @@ trait Memento {
 }
 
 #[derive(Debug)]
-struct OriginatorX(usize);
-impl Originator for OriginatorX {
+struct ConcreteOriginator(usize);
+impl Originator for ConcreteOriginator {
     fn generate_memento(&self) -> Box<Memento> {
-        Box::new(MementoX(self.0))
+        Box::new(ConcreteMemento(self.0))
     }
 
     fn restore_from_memento(&mut self, m: &Memento) {
@@ -36,26 +42,26 @@ impl Originator for OriginatorX {
     }
 }
 
-struct MementoX(usize);
-impl Memento for MementoX {
+struct ConcreteMemento(usize);
+impl Memento for ConcreteMemento {
     fn get_value(&self) -> usize {
         self.0
     }
 }
 
-struct CaretakerX {
+struct ConcreteCaretaker {
     history: Vec<Box<Memento>>,
 }
 
-impl CaretakerX {
-    fn new() -> CaretakerX {
-        CaretakerX {
+impl ConcreteCaretaker {
+    fn new() -> ConcreteCaretaker {
+        ConcreteCaretaker {
             history: Vec::new(),
         }
     }
 }
 
-impl Caretaker for CaretakerX {
+impl Caretaker for ConcreteCaretaker {
     fn add_memento(&mut self, m: Box<Memento>) {
         self.history.push(m)
     }
