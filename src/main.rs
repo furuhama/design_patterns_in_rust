@@ -9,4 +9,5 @@ fn main() {
     patterns::template_method();
     patterns::memento();
     patterns::observer();
+    patterns::visitor();
 }

@@ -6,6 +6,7 @@ pub use self::strategy::strategy;
 pub use self::template_method::template_method;
 pub use self::memento::memento;
 pub use self::observer::observer;
+pub use self::visitor::visitor;
 
 mod command;
 mod state;
@@ -13,3 +14,4 @@ mod strategy;
 mod template_method;
 mod memento;
 mod observer;
+mod visitor;
