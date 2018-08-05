@@ -10,4 +10,5 @@ fn main() {
     patterns::memento();
     patterns::observer();
     patterns::visitor();
+    patterns::iterator();
 }
