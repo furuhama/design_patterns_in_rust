@@ -7,9 +7,19 @@ pub fn iterator() {
     for i in c {
         println!("container value: {}", i);
     }
+
+    let mut c2: Container<&str> = Container::<&str>::new();
+    c2.add("no.1");
+    c2.add("no.2");
+    c2.add("no.3");
+
+    for i in c2 {
+        println!("container2 value: {}", i);
+    }
 }
 
-struct Container<T: Sized + Copy> {
+// struct Container<T: Sized + Copy> {
+struct Container<T: Copy> {
     buf: Vec<T>,
     index: usize,
 }
