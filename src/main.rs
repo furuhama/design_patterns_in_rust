@@ -8,4 +8,5 @@ fn main() {
     patterns::strategy();
     patterns::template_method();
     patterns::memento();
+    patterns::observer();
 }
