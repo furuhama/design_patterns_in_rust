@@ -3,13 +3,13 @@
 // but some detailed points are different.
 
 pub fn template_method() {
-    let factory_a = create_factory(FactoryID::A);
+    let factory_a = create_factory(&FactoryID::A);
     let a_x = factory_a.create_product_x();
     let a_y = factory_a.create_product_y();
     println!("{}", a_x.get_value());
     println!("{}", a_y.get_value());
 
-    let factory_b = create_factory(FactoryID::B);
+    let factory_b = create_factory(&FactoryID::B);
     let b_x = factory_b.create_product_x();
     let b_y = factory_b.create_product_y();
     println!("{}", b_x.get_value());
@@ -85,7 +85,7 @@ enum FactoryID {
     B,
 }
 
-fn create_factory<'a>(id: FactoryID) -> Box<AbstractFactory<'a> + 'a> {
+fn create_factory<'a>(id: &FactoryID) -> Box<AbstractFactory<'a> + 'a> {
     match id {
         FactoryID::A => Box::new(ConcreteFactoryA),
         FactoryID::B => Box::new(ConcreteFactoryB),

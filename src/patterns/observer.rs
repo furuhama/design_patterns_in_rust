@@ -21,15 +21,13 @@ trait Event {
 }
 
 #[derive(Debug, Clone)]
-struct EventObject{
+struct EventObject {
     title: String,
 }
 
 impl EventObject {
     fn new(title: String) -> EventObject {
-        EventObject {
-            title: title,
-        }
+        EventObject { title }
     }
 }
 
@@ -61,7 +59,7 @@ impl ConcreteSubject {
 
 impl Subject<EventObject> for ConcreteSubject {
     fn notify_observers(&self, event: &EventObject) {
-        for observer in self.observers.iter() {
+        for observer in &self.observers {
             if observer.0 {
                 observer.1.on_notify(event);
             }
@@ -88,6 +86,10 @@ struct ConcreteObserver(usize);
 
 impl Observer<EventObject> for ConcreteObserver {
     fn on_notify(&self, event: &EventObject) {
-        println!("ConcreteObserver {} gets event: [{}]", self.0, event.get_title());
+        println!(
+            "ConcreteObserver {} gets event: [{}]",
+            self.0,
+            event.get_title()
+        );
     }
 }

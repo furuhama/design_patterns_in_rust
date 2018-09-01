@@ -28,9 +28,7 @@ struct Context<'a, T: 'a> {
 
 impl<'a, T> Context<'a, T> {
     fn new(f: &'a BinaryFn<T>) -> Context<'a, T> {
-        Context {
-            strategy: f,
-        }
+        Context { strategy: f }
     }
 
     fn execute(&self, x: T, y: T) -> T {

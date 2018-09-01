@@ -67,6 +67,6 @@ impl Caretaker for ConcreteCaretaker {
     }
 
     fn get_memento(&mut self, index: usize) -> &Memento {
-        & *self.history[index]
+        &*self.history[index]
     }
 }

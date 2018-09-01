@@ -1,9 +1,13 @@
 pub fn visitor() {
     use self::Entity::*;
-    let entity = Dir("/".to_string(),
-        vec![File("etc".to_string()),
+    let entity = Dir(
+        "/".to_string(),
+        vec![
+            File("etc".to_string()),
             File("usr".to_string()),
-            Dir("var/".to_string(), vec![File("log".to_string())])]);
+            Dir("var/".to_string(), vec![File("log".to_string())]),
+        ],
+    );
     let mut visitor = ConcreteFileVisitor;
     visitor.visit(&entity);
 }
