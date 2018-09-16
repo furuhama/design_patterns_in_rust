@@ -8,6 +8,7 @@ pub use self::state::state;
 pub use self::strategy::strategy;
 pub use self::template_method::template_method;
 pub use self::visitor::visitor;
+pub use self::mediator::mediator;
 
 mod command;
 mod iterator;
@@ -17,3 +18,4 @@ mod state;
 mod strategy;
 mod template_method;
 mod visitor;
+mod mediator;
