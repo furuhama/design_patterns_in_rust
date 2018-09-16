@@ -9,6 +9,7 @@ pub use self::strategy::strategy;
 pub use self::template_method::template_method;
 pub use self::visitor::visitor;
 pub use self::mediator::mediator;
+pub use self::interpreter::interpreter;
 
 mod command;
 mod iterator;
@@ -19,3 +20,4 @@ mod strategy;
 mod template_method;
 mod visitor;
 mod mediator;
+mod interpreter;
