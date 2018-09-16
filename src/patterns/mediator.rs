@@ -14,9 +14,9 @@ pub fn mediator() {
     mediator.add_node(node2);
 
     let n1 = mediator.get(&label1);
-    n1.send_msg(&mediator, &label1, String::from("hi from Nyan"));
+    n1.send_msg(&mediator, &label1, "hi from Nyan");
     let n2 = mediator.get(&label2);
-    n2.send_msg(&mediator, &label2, String::from("hi from Piyo"));
+    n2.send_msg(&mediator, &label2, "hi from Piyo");
 }
 
 struct Mediator {
@@ -34,12 +34,12 @@ impl Mediator {
         self.nodes.insert(node.label.clone(), node);
     }
 
-    fn consult_to(&self, label: &str, msg: String) {
-        self.nodes.get(label).unwrap().receive_msg(msg);
+    fn consult_to(&self, label: &str, msg: &str) {
+        self.nodes[label].receive_msg(msg);
     }
 
     fn get(&self, label: &str) -> &Node {
-        self.nodes.get(label).unwrap()
+        &self.nodes[label]
     }
 }
 
@@ -50,15 +50,15 @@ struct Node {
 impl Node {
     fn new(label: &str) -> Self {
         Self {
-            label: label.clone().to_string(),
+            label: label.to_string(),
         }
     }
 
-    fn send_msg(&self, mediator: &Mediator, target_label: &str, msg: String) {
+    fn send_msg(&self, mediator: &Mediator, target_label: &str, msg: &str) {
         mediator.consult_to(target_label, msg);
     }
 
-    fn receive_msg(&self, msg: String) {
+    fn receive_msg(&self, msg: &str) {
         println!("{} received message: {}", self.label, msg);
     }
 }

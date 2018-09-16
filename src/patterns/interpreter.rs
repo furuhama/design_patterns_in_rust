@@ -16,7 +16,7 @@ impl Interpreter {
             for _ in 0..times {
                 print!("{} ", word);
             }
-            println!("");
+            println!();
         }
     }
 }
