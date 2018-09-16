@@ -11,6 +11,7 @@ pub use self::visitor::visitor;
 pub use self::mediator::mediator;
 pub use self::interpreter::interpreter;
 pub use self::builder::builder;
+pub use self::prototype::prototype;
 
 mod command;
 mod iterator;
@@ -23,3 +24,4 @@ mod visitor;
 mod mediator;
 mod interpreter;
 mod builder;
+mod prototype;

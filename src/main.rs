@@ -14,4 +14,5 @@ fn main() {
     patterns::mediator();
     patterns::interpreter();
     patterns::builder();
+    patterns::prototype();
 }
