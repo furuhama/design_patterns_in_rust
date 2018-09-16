@@ -10,6 +10,7 @@ pub use self::template_method::template_method;
 pub use self::visitor::visitor;
 pub use self::mediator::mediator;
 pub use self::interpreter::interpreter;
+pub use self::builder::builder;
 
 mod command;
 mod iterator;
@@ -21,3 +22,4 @@ mod template_method;
 mod visitor;
 mod mediator;
 mod interpreter;
+mod builder;
