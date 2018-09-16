@@ -15,4 +15,5 @@ fn main() {
     patterns::interpreter();
     patterns::builder();
     patterns::prototype();
+    patterns::factory();
 }
