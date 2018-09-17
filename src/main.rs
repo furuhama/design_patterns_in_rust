@@ -18,4 +18,5 @@ fn main() {
     patterns::factory();
     patterns::cor();
     patterns::proxy();
+    patterns::decorator();
 }
