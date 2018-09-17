@@ -13,6 +13,7 @@ pub use self::interpreter::interpreter;
 pub use self::builder::builder;
 pub use self::prototype::prototype;
 pub use self::factory::factory;
+pub use self::chain_of_responsibility::cor;
 
 mod command;
 mod iterator;
@@ -27,3 +28,4 @@ mod interpreter;
 mod builder;
 mod prototype;
 mod factory;
+mod chain_of_responsibility;

@@ -16,4 +16,5 @@ fn main() {
     patterns::builder();
     patterns::prototype();
     patterns::factory();
+    patterns::cor();
 }
