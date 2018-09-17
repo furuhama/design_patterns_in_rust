@@ -14,6 +14,7 @@ pub use self::builder::builder;
 pub use self::prototype::prototype;
 pub use self::factory::factory;
 pub use self::chain_of_responsibility::cor;
+pub use self::proxy::proxy;
 
 mod command;
 mod iterator;
@@ -29,3 +30,4 @@ mod builder;
 mod prototype;
 mod factory;
 mod chain_of_responsibility;
+mod proxy;
