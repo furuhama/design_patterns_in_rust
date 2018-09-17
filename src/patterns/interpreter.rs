@@ -1,4 +1,5 @@
 // Interpreter pattern
+//
 // Define simple DSL string literal, and parse & execute it.
 
 pub fn interpreter() {

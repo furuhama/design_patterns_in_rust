@@ -1,3 +1,5 @@
+// Observer pattern
+//
 // Subject manages all Events
 // Observer is called from Subject when Event occurs
 

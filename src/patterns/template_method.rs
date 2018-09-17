@@ -1,5 +1,6 @@
 // Template Method pattern
-// this pattern is for maintaining mothods which are almost the same
+//
+// This pattern is for maintaining mothods which are almost the same,
 // but some detailed points are different.
 
 pub fn template_method() {

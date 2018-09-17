@@ -1,4 +1,4 @@
-// Memento Pattern
+// Memento pattern
 //
 // Originator has its state.
 // Caretaker memorize Originator's previous states.

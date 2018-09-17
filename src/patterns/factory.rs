@@ -1,4 +1,4 @@
-// Factory Pattern
+// Factory pattern
 
 pub fn factory() {
     let f = Factory;

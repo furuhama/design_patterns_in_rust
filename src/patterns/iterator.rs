@@ -1,3 +1,5 @@
+// Iterator pattern
+
 pub fn iterator() {
     let mut c: Container<usize> = Container::<usize>::new();
     c.add(10);

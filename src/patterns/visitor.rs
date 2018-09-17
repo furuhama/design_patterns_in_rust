@@ -1,3 +1,5 @@
+// Visitor pattern
+
 pub fn visitor() {
     use self::Entity::*;
     let entity = Dir(

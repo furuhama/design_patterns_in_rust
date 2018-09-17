@@ -1,4 +1,4 @@
-// Command Pattern
+// Command pattern
 
 pub fn command() {
     let mut r = Robot::new();

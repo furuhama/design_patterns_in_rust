@@ -1,4 +1,4 @@
-// Strategy Pattern
+// Strategy pattern
 
 pub fn strategy() {
     let add = |x: usize, y: usize| x + y;

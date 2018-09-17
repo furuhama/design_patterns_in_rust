@@ -1,4 +1,4 @@
-// State Pattern
+// State pattern
 //
 // Electronic Dices::
 // Push button -> Power on, Start spinning
