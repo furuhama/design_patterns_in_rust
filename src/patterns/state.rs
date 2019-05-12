@@ -38,7 +38,7 @@ enum StateDice {
 }
 
 trait State {
-    fn on_press_button(&self, &mut StateContext);
+    fn on_press_button(&self, _: &mut StateContext);
 }
 
 struct StatePowerOn;

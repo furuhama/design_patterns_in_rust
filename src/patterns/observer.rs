@@ -42,9 +42,9 @@ impl Event for EventObject {
 // Subject
 
 trait Subject<T: Clone> {
-    fn notify_observers(&self, &T);
-    fn register_observer(&mut self, Box<Observer<T>>) -> usize;
-    fn unregister_observer(&mut self, usize);
+    fn notify_observers(&self, _: &T);
+    fn register_observer(&mut self, _: Box<Observer<T>>) -> usize;
+    fn unregister_observer(&mut self, _: usize);
 }
 
 struct ConcreteSubject {
@@ -81,7 +81,7 @@ impl Subject<EventObject> for ConcreteSubject {
 // Observer
 
 trait Observer<T: Clone> {
-    fn on_notify(&self, &T);
+    fn on_notify(&self, _: &T);
 }
 
 struct ConcreteObserver(usize);

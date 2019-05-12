@@ -7,7 +7,7 @@ pub fn factory() {
 }
 
 trait Product {
-    fn convert(&self, String) -> String;
+    fn convert(&self, _: String) -> String;
 }
 
 struct Factory;

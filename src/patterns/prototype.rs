@@ -13,8 +13,8 @@ pub fn prototype() {
 
 // Prototype trait has the trait bound(= requires Clone trait)
 trait Prototype: Clone {
-    fn set_x(&mut self, usize);
-    fn set_y(&mut self, usize);
+    fn set_x(&mut self, _: usize);
+    fn set_y(&mut self, _: usize);
 }
 
 #[derive(Clone, Debug)]

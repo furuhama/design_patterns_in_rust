@@ -15,7 +15,7 @@ pub fn cor() {
 }
 
 trait CoR {
-    fn process_request(&self, &mut Request);
+    fn process_request(&self, _: &mut Request);
 }
 
 trait Request {

@@ -57,8 +57,8 @@ pub fn command() {
 }
 
 trait Command<T> {
-    fn execute(&self, &mut T);
-    fn undo(&self, &mut T);
+    fn execute(&self, _: &mut T);
+    fn undo(&self, _: &mut T);
 }
 
 struct Invoker<'a, Cmd, T: 'a> {

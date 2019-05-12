@@ -2,5 +2,6 @@
 name = "design_pattern_in_rust"
 version = "0.1.0"
 authors = ["furuhama <furuhama@users.noreply.github.com>"]
+edition = "2018"
 
 [dependencies]

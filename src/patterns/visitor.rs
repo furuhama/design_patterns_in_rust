@@ -15,7 +15,7 @@ pub fn visitor() {
 }
 
 trait Visitor<T> {
-    fn visit(&mut self, &T);
+    fn visit(&mut self, _: &T);
 }
 
 enum Entity {

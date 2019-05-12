@@ -18,12 +18,12 @@ pub fn memento() {
 
 trait Originator {
     fn generate_memento(&self) -> Box<Memento>;
-    fn restore_from_memento(&mut self, &Memento);
+    fn restore_from_memento(&mut self, _: &Memento);
 }
 
 trait Caretaker {
-    fn add_memento(&mut self, Box<Memento>);
-    fn get_memento(&mut self, usize) -> &Memento;
+    fn add_memento(&mut self, _: Box<Memento>);
+    fn get_memento(&mut self, _: usize) -> &Memento;
 }
 
 trait Memento {
